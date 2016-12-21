@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import Navbar from '../Navbar/Navbar';
-import LoginForm from '../LoginForm/LoginForm';
 
 import './App.css';
 
@@ -23,12 +22,8 @@ export default class App extends Component {
         return (
             <div className="App">
                 <Navbar />
-                <div className="container">
-                    <LoginForm />
-                </div>
+                {this.props.children || "Error Loading Child Component"}
             </div>
         );
     }
 }
-                  // <h1>Yeah!</h1>
-                  // <a className="waves-effect waves-light btn" onClick={this.handleClick.bind(this)}>button</a>

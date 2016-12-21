@@ -33,29 +33,31 @@ export default class LoginForm extends Component {
 
     render() {
         return (
-            <form className="login-form" onSubmit={this.handleLogin.bind(this)}>
-                <div className="row">
-                    <div className="input-field col s12">
-                    <i className="material-icons prefix">account_circle</i>
-                    <input id="username" onChange={this.handleUsernameChange.bind(this)} type="text" className="validate"/>
-                    <label htmlFor="username">Username</label>
+            <div className="container">
+                <form className="login-form" onSubmit={this.handleLogin.bind(this)}>
+                    <div className="row">
+                        <div className="input-field col s12">
+                        <i className="material-icons prefix">account_circle</i>
+                        <input id="username" onChange={this.handleUsernameChange.bind(this)} type="text" className="validate"/>
+                        <label htmlFor="username">Username</label>
+                        </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="input-field col s12">
-                    <i className="material-icons prefix">lock</i>
-                    <input id="password" onChange={this.handlePasswordChange.bind(this)} type="password" className="validate"/>
-                    <label htmlFor="password">Password</label>
+                    <div className="row">
+                        <div className="input-field col s12">
+                        <i className="material-icons prefix">lock</i>
+                        <input id="password" onChange={this.handlePasswordChange.bind(this)} type="password" className="validate"/>
+                        <label htmlFor="password">Password</label>
+                        </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col offset-s10">
-                        <button className="btn waves-effect waves-light" type="submit" name="action">Submit
-                            <i className="material-icons right">send</i>
-                        </button>
+                    <div className="row">
+                        <div className="col offset-s10">
+                            <button className="btn waves-effect waves-light" type="submit" name="action">Submit
+                                <i className="material-icons right">send</i>
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         );
     }
 }
