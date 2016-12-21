@@ -1,0 +1,5 @@
+/*Pad the left and right of the navbar*/
+.pad-navbar-side {
+    padding-left: 5%;
+    padding-right: 5%;
+}

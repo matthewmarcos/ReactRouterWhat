@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import './App.css';
 import axios from 'axios';
 
-class App extends Component {
+import Navbar from '../Navbar/Navbar';
+import LoginForm from '../LoginForm/LoginForm';
 
+import './App.css';
+
+export default class App extends Component {
 
     handleClick() {
-        axios.get('/api')
+        axios.get('/api/asdasd')
           .then(function (response) {
-              console.log(response);
+              const { data } = response;
+              console.log(data);
           })
           .catch(function (error) {
               console.log(error);
@@ -18,11 +22,13 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1>Yeah!</h1>
-                <a className="waves-effect waves-light btn" onClick={this.handleClick.bind(this)}>button</a>
+                <Navbar />
+                <div className="container">
+                    <LoginForm />
+                </div>
             </div>
         );
     }
 }
-
-export default App;
+                  // <h1>Yeah!</h1>
+                  // <a className="waves-effect waves-light btn" onClick={this.handleClick.bind(this)}>button</a>
