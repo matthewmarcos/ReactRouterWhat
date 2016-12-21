@@ -5,6 +5,7 @@ import App from './App/App';
 import Home from './Home/Home';
 import LoginForm from './LoginForm/LoginForm';
 import SignupForm from './SignupForm/SignupForm';
+import NoMatch from './NoMatch/NoMatch';
 
 export default class MyRouter extends Component {
     render() {
@@ -15,6 +16,7 @@ export default class MyRouter extends Component {
                     <Route path="login" component={LoginForm}/>
                     <Route path="signup" component={SignupForm}/>
                 </Route>
+                <Route path="*" component={NoMatch}/>
             </Router>
         );
     }
