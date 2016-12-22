@@ -14,7 +14,6 @@ export default class LoginForm extends Component {
         console.log('Password:', password);
     }
 
-
     render() {
         return (
             <div className="container">
