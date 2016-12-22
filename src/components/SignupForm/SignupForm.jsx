@@ -4,68 +4,52 @@ import './SignupForm.css';
 
 export default class SignupForm extends Component {
 
-    constructor() {
-        super();
-
-        this.state = {
-            username: '',
-            password: ''
-        };
-    }
-
-    handleLogin(e) {
+    handleSignup(e) {
         e.preventDefault();
-        console.log('Submitted form');
-        window.myForm = e.target;
-        console.log(e.target);
-        const { username, password } = this.state;
+
+        const username = e.target.elements['username'].value;
+        const password = e.target.elements['password'].value;
+        const password2 = e.target.elements['password_retype'].value;
+
+        if(password !== password2) {
+            return console.log('Passwords do not match!');
+        }
 
         console.log('Username: ', username);
         console.log('Password:', password);
     }
 
-    handlePasswordChange(e) {
-        const password = e.target.value;
-        this.setState({ password });
-    }
-
-    handleUsernameChange(e) {
-        const username = e.target.value;
-        this.setState({ username });
-    }
-
     render() {
         return(
             <div className="container">
-                <h2 className="header">Create Account</h2>
+                <h2 className="header">Create Profile</h2>
                 <div className="card horizontal">
                     <div className="card-stacked">
                         <div className="card-content">
-                        <form className="login-form" onSubmit={this.handleLogin.bind(this)}>
+                        <form className="login-form" onSubmit={this.handleSignup.bind(this)}>
                             <div className="row">
                                 <div className="input-field col s12">
                                 <i className="material-icons prefix">account_circle</i>
-                                <input id="username" onChange={this.handleUsernameChange.bind(this)} type="text" className="validate"/>
+                                <input id="username" type="text" className="validate"/>
                                 <label htmlFor="username">Username</label>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="input-field col s12">
+                                <div className="input-field col s6">
                                 <i className="material-icons prefix">lock</i>
-                                <input id="password" onChange={this.handlePasswordChange.bind(this)} type="password" className="validate"/>
+                                <input id="password" type="password" className="validate"/>
                                 <label htmlFor="password">Password</label>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="input-field col s12">
+
+                                <div className="input-field col s6">
                                 <input id="password_retype" type="password" className="validate"/>
                                 <label htmlFor="password">Retype Password</label>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="col offset-s10">
-                                    <button className="btn waves-effect waves-light" type="submit" name="action">Submit
+                                <div className="col right">
+                                    <button className="btn waves-effect waves-light" type="submit" name="action">Find Roommates!
                                         <i className="material-icons right">send</i>
                                     </button>
                                 </div>
