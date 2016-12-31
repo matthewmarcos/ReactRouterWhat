@@ -1,3 +1,9 @@
-# Room8! My SP.
+# Room8!
 
-### As long as it works, everything else you say does not matter.
+### A Roommate Match-making application
+
+
+## Technologies
+- React + Redux (create-react-app)
+- Node + Express
+- MySQL

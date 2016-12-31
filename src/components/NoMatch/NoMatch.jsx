@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React, {Component} from 'react';
+import {Link} from 'react-router';
 
 import './NoMatch.css';
 import Sadface from './images/sadface.png';
@@ -7,7 +7,7 @@ import Sadface from './images/sadface.png';
 export default class NoMatch extends Component {
 
     render() {
-        return(
+        return (
             <div className="center no-match container">
                 <h1>Oops!</h1>
                 <img id="sadface-image" src={Sadface} alt="Sadface"/>
